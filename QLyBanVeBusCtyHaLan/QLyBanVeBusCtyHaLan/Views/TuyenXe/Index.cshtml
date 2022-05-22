@@ -1,0 +1,54 @@
+﻿@model IEnumerable<QLyBanVeBusCtyHaLan.Models.TuyenXe>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Tuyến Xe</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<div>Tìm kiếm tuyến xe:</div>
+<input type="text" name="txttuyenxe" />
+<input type="submit" name="btnTim" value="Find" />
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.matuyen)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tentuyen)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.giohoatdong)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tansuathoatdong)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.matuyen)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tentuyen)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.giohoatdong)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tansuathoatdong)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.matuyen }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.matuyen })
+            </td>
+        </tr>
+    }
+
+</table>

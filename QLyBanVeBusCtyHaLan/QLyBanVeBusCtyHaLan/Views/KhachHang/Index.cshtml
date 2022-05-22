@@ -1,0 +1,65 @@
+﻿@model IEnumerable<QLyBanVeBusCtyHaLan.Models.KhachHang>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Khách hàng</h2>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<div>Tìm kiếm khách hàng:</div>
+<input type="text" name="txtkhachhang" />
+<input type="submit" name="btnTim" value="Find" />
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.tenKH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ngaysinh)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gioitinh)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.diachi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.noilamviec)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sdt)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.tenKH)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ngaysinh)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.gioitinh)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.diachi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.noilamviec)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.sdt)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.maKH }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.maKH })
+            </td>
+        </tr>
+    }
+
+</table>

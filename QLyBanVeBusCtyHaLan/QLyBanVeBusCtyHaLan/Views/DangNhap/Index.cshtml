@@ -1,0 +1,20 @@
+﻿@{
+    Layout = "~/Views/Shared/_DangNhap.cshtml";
+
+}
+@{
+    ViewBag.Title = "ĐĂNG NHẬP HỆ THỐNG";
+}
+
+<h2>THÔNG TIN ĐĂNG NHẬP</h2>
+@using (Html.BeginForm("Dieuhuong", "DangNhap", FormMethod.Post))
+{
+    
+    <div>User Name:</div>
+    <input type="text" name="tendn" />
+    <div>Password:</div>
+    <input type="password" name="mk" />
+    <div></div>
+    <input type="submit" name="ok" value="Đăng nhập" />
+    @TempData["kq"]
+  }

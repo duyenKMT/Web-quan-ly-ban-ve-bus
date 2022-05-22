@@ -1,0 +1,55 @@
+﻿@model IEnumerable<QLyBanVeBusCtyHaLan.Models.BaoCaoBanVe>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+<h2>Theo dõi bán vé</h2>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<div>Tìm kiếm:</div>
+<input type="text" name="txtbaocao" />
+<input type="submit" name="btnTim" value="Find" />
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.mabaocao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NhanVien.tenNV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.matuyen)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ngaylap)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.mabaocao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NhanVien.tenNV)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.matuyen)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ngaylap)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.mabaocao }) |
+                @Html.ActionLink("Details", "Details", new { id = item.mabaocao }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.mabaocao })
+            </td>
+        </tr>
+    }
+
+</table>
