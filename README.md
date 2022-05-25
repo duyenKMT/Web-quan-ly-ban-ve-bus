@@ -4,3 +4,4 @@
 - Xem thông tin vé, nhân viên, khách hàng, tuyến xe
 - Theo dõi tình hình bán vé
 - Quản lý người dùng dành cho Admin 
+Note: Web chưa hoàn thiện: Hiện tại chỉ gồm các chức năng: load dữ liệu, thêm mới, xóa dòng
