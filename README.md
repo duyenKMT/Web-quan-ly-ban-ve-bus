@@ -3,6 +3,5 @@
 - Đăng nhập vào hệ thống
 - Xem, thêm mới, xóa các thông tin: vé, nhân viên, khách hàng, tuyến xe
 - Theo dõi tình hình bán vé
-- Quản lý người dùng dành cho Admin 
-
+- Quản lý người dùng dành cho Admin <br>
 Note: Web còn vài chức năng chưa hoàn thiện.
